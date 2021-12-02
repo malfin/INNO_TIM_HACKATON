@@ -6,6 +6,7 @@ from inno_tim import settings
 
 urlpatterns = [
     path('', include('mainapp.urls', namespace='mainapp')),
+    path('user/', include('authapp.urls', namespace='authapp')),
     path('admin/', admin.site.urls),
 ]
 if settings.DEBUG:

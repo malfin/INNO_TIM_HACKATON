@@ -56,3 +56,8 @@ class Startup(models.Model):
     class Meta:
         verbose_name = 'заявка'
         verbose_name_plural = 'заявки'
+
+
+class Command(models.Model):
+    name = models.CharField(max_length=64)
+    about = models.TextField(blank=True)

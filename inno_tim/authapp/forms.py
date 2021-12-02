@@ -28,7 +28,7 @@ class ProfileForm(UserChangeForm):
         fields = ('username', 'first_name',
                   'role', 'last_name',
                   'about', 'telegram',
-                  'email',)
+                  'email', 'command',)
 
     def __init__(self, *args, **kwargs):
         super(UserChangeForm, self).__init__(*args, **kwargs)

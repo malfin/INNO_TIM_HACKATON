@@ -19,7 +19,7 @@ class UserProfile(AbstractUser):
     role = models.CharField(_('role'), max_length=1, choices=ROLE_CHOICES, blank=False)
     telegram = models.CharField(max_length=200, blank=True)
     telegram_url = models.URLField(max_length=200, blank=True)
-    command = models.ForeignKey(Command, on_delete=models.CASCADE, blank=True)
+    command = models.ForeignKey(Command, on_delete=models.CASCADE, default=True)
     is_active = models.BooleanField(default=True, db_index=True)
 
     def __str__(self):

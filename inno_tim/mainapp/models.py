@@ -61,3 +61,10 @@ class Startup(models.Model):
 class Command(models.Model):
     name = models.CharField(max_length=64)
     about = models.TextField(blank=True)
+
+    def __str__(self):
+        return f'{self.name}'
+
+    class Meta:
+        verbose_name = 'Команда'
+        verbose_name_plural = 'Команды'
